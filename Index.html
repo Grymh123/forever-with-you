@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Forever With You ❤️</title>
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle at top, #1a1a1a, #000);
+    color: #fff;
+    font-family: 'Georgia', serif;
+    overflow: hidden;
+}
+
+.container {
+    padding: 40px;
+    text-align: center;
+    animation: fadeIn 3s;
+}
+
+h1 {
+    color: #ff6b81;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    opacity: 0;
+    animation: textFade 3s forwards;
+}
+
+p:nth-child(2) { animation-delay: 2s; }
+p:nth-child(3) { animation-delay: 6s; }
+p:nth-child(4) { animation-delay: 10s; }
+
+@keyframes fadeIn {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+@keyframes textFade {
+    to {opacity:1;}
+}
+
+.heart {
+    position: absolute;
+    color: #ff4d6d;
+    font-size: 18px;
+    animation: float 6s infinite;
+}
+
+@keyframes float {
+    0% {transform: translateY(0); opacity:1;}
+    100% {transform: translateY(-800px); opacity:0;}
+}
+
+button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    background: #ff4d6d;
+    color: white;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_5e3f4d41b2.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+<h1>Meri Jaan ❤️</h1>
+
+<p>
+Kabhi kabhi zindagi khamosh hoti hai…<br>
+Some nights are heavy,<br>
+lekin tumhara khayal meri awaaz ban jata hai۔
+</p>
+
+<p>
+I am not perfect,<br>
+magar tumse pyar hamesha sach rahe ga۔<br>
+Even in silence, my heart chooses you۔
+</p>
+
+<p>
+Tumhara saath meri himmat hai۔<br>
+You make my broken days beautiful again۔
+</p>
+
+<p>
+I don’t want a perfect life,<br>
+I want a life with you۔<br>
+<b>Forever Yours 💍</b>
+</p>
+
+<button onclick="alert('I Love You Meri Jaan ❤️')">
+Forever With You
+</button>
+</div>
+
+<script>
+setInterval(() => {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.top = "100vh";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+}, 400);
+</script>
+
+</body>
+</html>
